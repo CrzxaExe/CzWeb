@@ -1,0 +1,99 @@
+body {
+  background: linear-gradient(#1E0952, #0f0f0f) fixed;
+}
+@font-face {
+  font-family: Valorant;
+  src: url("/fonts/Valorant.ttf");
+}
+@font-face {
+  font-family: SourceCode;
+  src: url("/fonts/SourceCode.ttf");
+}
+@font-face {
+  font-family: Brush;
+  src: url("/fonts/Brush.ttf");
+}
+#logo img {
+  width: 40vw;
+  height: 100%;
+  position: relative;
+  bottom: 4.5vw;
+  z-index: 3;
+}
+.panorama {
+  width: 100%;
+  height: 100%;
+  right: 1px;
+  position: absolute;
+  object-fit: contain;
+  z-index: 0;
+  bottom: 40%;
+}
+#tab {
+  width: 80%;
+  height: 140vw;
+  left: 10vw;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  z-index: 2;
+  top: 20vmax;
+  background: rgba(15,15,15, 0.4);
+}
+.zxra a {
+  color: white;
+  font-family: Valorant;
+  font-size: 6vw;
+  position: relative;
+  padding: 5px 0;
+  top: 0.5em;
+}
+#tooltip {
+  opacity: 0;
+  left: 11em;
+  font-size: 3vw;
+  font-family: Brush;
+  position: absolute;
+  color: white;
+}
+#introP {
+  top: 3.8em;
+  padding: 0.5em 0.5em;
+  border-radius: 4px;
+  width: 31em;
+  height: auto;
+  position: absolute;
+  left: 2em;
+  background: #281657;
+  text-align: left;
+  font-family: SourceCode;
+  color: #b195fc;
+  font-size: 2.2vw;
+}
+.pad1 {
+  color: white;
+  right: 0em;
+  width: 31em;
+  text-align: justify;
+  font-family: SourceCode;
+  top: 24em;
+  padding: 0.5em 0;
+  position: relative;
+  font-size: 2.2vw;
+}
+#package {
+  padding: 0.5em 0.5em;
+  border-radius: 4px;
+  width: 31em;
+  max-height: auto;
+  position: absolute;
+  outline-style: none;
+  top: 36em;
+  left: 2em;
+  background: #281657;
+  text-align: left;
+  font-family: SourceCode;
+  color: #b195fc;
+  font-size: 2.2vw;
+}
