@@ -3,15 +3,15 @@ body {
 }
 @font-face {
   font-family: Valorant;
-  src: url("./fonts/Valorant.ttf") format("truetype");
+  src: url("/fonts/Valorant.ttf") format("truetype");
 }
 @font-face {
   font-family: SourceCode;
-  src: url("./fonts/SourceCode.ttf") format("truetype");
+  src: url("/fonts/SourceCode.ttf") format("truetype");
 }
 @font-face {
   font-family: Brush;
-  src: url("./fonts/Brush.ttf") format("truetype");
+  src: url("/fonts/Brush.ttf") format("truetype");
 }
 #logo img {
   width: 40vw;
@@ -89,11 +89,33 @@ body {
   max-height: auto;
   position: absolute;
   outline-style: none;
-  top: 36em;
+  top: 35em;
   left: 2em;
   background: #281657;
   text-align: left;
   font-family: SourceCode;
   color: #b195fc;
   font-size: 2.2vw;
+}
+#package #paket{
+  position: relative;
+}
+#package #link {
+  opacity: 0;
+  bottom: 1em;
+  left: 0em;
+  color: white;
+  padding: 0.5px 6px;
+  border-radius: 2px;
+  background: #3a1f81;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+#linkText {
+  color: red;
+  text-decoration: none;
+}
+#linkText:hover #link {
+  left: 2.8em;
+  opacity: 1;
 }

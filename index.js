@@ -22,7 +22,7 @@ var text = {
     "red": "#f29e9e",
     "blue": "#779bff"
   },
-  "intro": "// Hey, Zxators<br>// Welcome to <b><font color='#95effc'>Zxra Website</font></b><br>// Lets begin to 'Eazier yours live'<br> <br><font color='#f29e9e'>const</font> Zxra = require(<font color='#e1da48'>'Zxra'</font>);<br><font color='#f29e9e'>var</font> socialMedia = {<br>&nbsp;<font color='#779bff'>'Facebook'</font>: <font color='#e1da48'>'Crzx Zxra'</font>,<br>&nbsp;<font color='#779bff'>'Youtube'</font>: <font color='#e1da48'>'Crzx_3'</font><br>};<br> <br>// Lets get started<br>Zxra.setCreatorSocialMedia(socialMedia)<br><font color='#f29e9e'>let</font> calendar = %time;<br>Zxra.alat([<br>&nbsp;{<br>&nbsp;&nbsp;<font color='#779bff'>'pribumi'</font>: <font color='#779bff'>'Haris'</font><br>&nbsp;}<br>])"
+  "intro": "// Hey, Zxators<br>// Welcome to <b><font color='#95effc'>Zxra Website</font></b><br>// Lets begin to 'Eazier yours live'<br> <br><font color='#f29e9e'>const</font> Zxra = require(<font color='#e1da48'>'Zxra'</font>);<br><font color='#f29e9e'>var</font> socialMedia = {<br>&nbsp;<font color='#779bff'>'Facebook'</font>: <font color='#e1da48'>'Crzx Zxra'</font>,<br>&nbsp;<font color='#779bff'>'Youtube'</font>: <font color='#e1da48'>'Crzx_3'</font><br>};<br> <br>// Lets get started<br>Zxra.setCreatorSocialMedia(socialMedia)<br><font color='#f29e9e'>let</font> time = <span id='time'></span>;<br>Zxra.alat([<br>&nbsp;{<br>&nbsp;&nbsp;<font color='#779bff'>'pribumi'</font>: <font color='#779bff'>'Haris'</font><br>&nbsp;}<br>])"
 }
 var package = [
   {
@@ -51,8 +51,12 @@ var package = [
   }
 ]
 // Docs
-introP.innerHTML = text.intro.replace("%time",time.toLocaleDateString());
+window.setInterval(() => {
+  const timer = document.getElementById("time")
+  timer.innerHTML = time.toLocaleTimeString();
+})
+introP.innerHTML = text.intro;
 for(let index of package) {
-  packText += `${index.name}<br>Status <font color='#f29e9e'>${index.status}</font><br>Version <font color='#e1da48'>${index.version}</font><br> <a href='${index.link}'>Link</a><br> <br>`
+  packText += `<div id='paket'>${index.name}<br>Status <font color='#f29e9e'>${index.status}</font><br>Version <font color='#e1da48'>${index.version}</font><br> <a id='linkText' href='${index.link}'>Link<div id="link">${index.link}</div></a><br> <br></div>`
 }
 paket.innerHTML = packText;
