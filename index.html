@@ -4,24 +4,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="./index.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <title>Zxra Creation</title>
 </head>
 <body>
-	<div class="content">
-	  <div id="logo"><center>
-	    <img id="ln" src="img/zxra.png">
-	  </center></div>
-	  <img class="panorama" src="img/heads.png">
-	  <div id="tab"><center>
-	    <div class="zxra">
-	      <a onClick="Zxra()">Zxra Creation</a>
-	      <span id="tooltip">Eazier your live</span>
-	    </div>
-	    <a id="introP"></a>
-	    <p class="pad1">Here is the all of Zxra project, you can use this and customable but you have to add my name in credits file.<br>Here:</p>
-	    <a id="package"></a>
-	  </center></div>
-	</div>
+  <div class="container">
+    <div class="header">
+      <img src="./img/zxra.png" id="logo">
+      <b id="name">Zxra Create</b>
+      <a id="motto">Eazier your life with us</a>
+      <div id="pad"></div>
+      <div id="clock"></div>
+      <div id="mode"><i class='bx bx-code-alt' onclick="toggleMode()"></i></div>
+    </div>
+    <div class="content"><center>
+      <div class="profile">
+        <div class="top">
+          <a id="hi">Watashi wa</a>
+          <a id="names">CrzxaExe3</a>
+          <a id="gweh">Can't realize your imagination</a>
+          <img src="./img/icon.png" id="icons">
+        </div>
+        <div class="stat">
+          <a id="about">About Me</a>
+          <img src="./img/photo.png" class="photo">
+          <a id="description"></a>
+        </div>
+      </div>
+    </center></div>
+    <div id="display">
+      <a id="prjk">Projects</a>
+    </div>
+    <a id="hrs">Haris Kontol Kuda</a>
+  </div>
 	<script src="./index.js"></script>
 </body>
 </html>

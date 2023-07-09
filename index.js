@@ -1,62 +1,83 @@
-const introP = document.getElementById("introP");
-const paket = document.getElementById("package");
-let packText = "";
-
-window.addEventListener("scroll", () => {
-  let scroll = this.scrollY.toFixed(2);
+setInterval(() => {
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  
+  let times = `${hours}:${minutes}`;
+  
+  document.getElementById("clock").textContent = times;
 })
-// Function
-function Zxra() {
-  const tooltip = document.getElementById("tooltip");
-  tooltip.style.opacity = 1;
-  setTimeout(() => {
-    tooltip.style.opacity = 0;
-  }, 2000)
-  console.log("tes")
+
+const text = {
+  description: "<a id='folder'>Folders Char</a>Rl Name: Bintang Nugraha Putra<br>Call  &nbsp;&nbsp;: Putra, Kyle<br>Birth  &nbsp;: 3 December<br>Age &nbsp; &nbsp;: %age old<br> <br>Just people who using his ideas for easier their life.<br>The student of SMAN 1 Rowokele with his dump face.<br>And the Leader of <font color='blue sky' font-weight='bold'>Zxra Creation</font><br> <br>I am just tried to get more knowledge for may programming skills, for now i am just create a simple bots and simple mod for some game.<br>Now i have advance my JavaScript lang, but another day i will learn more programming language<br> <br> <br> <br> <br> <br> <br>-Zxra"
 }
-// Variabel
-let time = new Date();
-var text = {
-  "color": {
-    "yellow": "#e1da48",
-    "red": "#f29e9e",
-    "blue": "#779bff"
-  },
-  "intro": "// Hey, Zxators<br>// Welcome to <b><font color='#95effc'>Zxra Website</font></b><br>// Lets begin to 'Eazier yours live'<br> <br><font color='#f29e9e'>const</font> Zxra = require(<font color='#e1da48'>'Zxra'</font>);<br><font color='#f29e9e'>var</font> socialMedia = {<br>&nbsp;<font color='#779bff'>'Facebook'</font>: <font color='#e1da48'>'Crzx Zxra'</font>,<br>&nbsp;<font color='#779bff'>'Youtube'</font>: <font color='#e1da48'>'Crzx_3'</font><br>};<br> <br>// Lets get started<br>Zxra.setCreatorSocialMedia(socialMedia)<br><font color='#f29e9e'>let</font> time = <span id='time'></span>;<br>Zxra.alat([<br>&nbsp;{<br>&nbsp;&nbsp;<font color='#779bff'>'pribumi'</font>: <font color='#779bff'>'Haris'</font><br>&nbsp;}<br>])"
-}
-var package = [
+const project = [
   {
-    "name": "Discord Bot",
-    "status": "Resting",
-    "version": "2.8.0",
-    "link": ""
+    name: "Harzx",
+    description: "Chat web",
+    version: "-1.0.0",
+    icon: "./img/project.png",
+    link: "-"
   },
   {
-    "name": "WhatsApp bot",
-    "status": "Resting",
-    "version": "1.8.3",
-    "link": ""
+    name: "KhyroBot",
+    description: "Bot for any apps(Discord, Whatsapp)<br> <br>But now we have pause this update and the bots are not hosted",
+    version: "2.6.0",
+    icon: "./img/project.png",
+    link: "-"
   },
   {
-    "name": "Zxra API",
-    "status": "Available for Minecraft 1.19+",
-    "version": "2.5.0",
-    "link": "https://github.com/CrzxaExe/Zxra-Api"
+    name: "Mkx Bot",
+    description: "Private Discord Bot",
+    version: "1.0.0",
+    icon: "./img/project.png",
+    link: "-"
   },
   {
-    "name": "ZxraDustry",
-    "status": "Outdated",
-    "version": "1.0.0",
-    "link": "https://github.com/CrzxaExe/ZxraDustry"
+    name: "Zxra Api",
+    description: "Addon for Minecraft Bedrock",
+    version: "2.5.0",
+    icon: "https://raw.githubusercontent.com/CrzxaExe/Zxra-Api/main/pack_icon.png",
+    link: "https://github.com/CrzxaExe/ZxraApi/"
+  },
+  {
+    name: "ZxraDustry",
+    description: "Mod for Mindustry",
+    version: "1.0.0",
+    icon: "https://raw.githubusercontent.com/CrzxaExe/ZxraDustry/main/icon.png",
+    link: "https://github.com/CrzxaExe/ZxraDustry"
   }
 ]
-// Docs
-window.setInterval(() => {
-  const timer = document.getElementById("time")
-  timer.innerHTML = time.toLocaleTimeString();
-})
-introP.innerHTML = text.intro;
-for(let index of package) {
-  packText += `<div id='paket'>${index.name}<br>Status <font color='#f29e9e'>${index.status}</font><br>Version <font color='#e1da48'>${index.version}</font><br> <a id='linkText' href='${index.link}'>Link<div id="link">${index.link}</div></a><br> <br></div>`
+
+document.getElementById("description").innerHTML = text.description.replace("%age", `${ageCalc("2005-12-03")}`);
+
+for(let apps of project) {
+  document.getElementById("display").innerHTML += `<div class='app'><a>${apps.name}</a><img src='${apps.icon}'><p>${apps.description}</p><c>v${apps.version}</c></div>`;
 }
-paket.innerHTML = packText;
+
+function ageCalc(date) {
+  var today = new Date()
+  var calc = new Date(date)
+  
+  var age = today.getFullYear() - calc.getFullYear();
+  var month = today.getMonth() - calc.getMonth();
+  var day = today.getDate() - calc.getDate();
+  
+  if(month < 0 || ( month === 0 && day < 0 )) age--;
+  return age
+}
+
+function toggleMode() {
+  document.body.classList.toggle('dark-mode');
+  document.body.classList.toggle('light-mode');
+}
+
+function toggleSkill() {
+  const skill = document.getElementById("skill");
+  const nps = document.getElementById("nps");
+  skill.classList.toggle("hidden")
+  skill.classList.toggle("open")
+  if(nps.textContent === "+ Skills") {
+    nps.textContent = "- Skills"
+  } else nps.textContent = "+ Skills"
+}

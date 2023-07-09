@@ -1,5 +1,11 @@
 body {
-  background: linear-gradient(#1E0952, #0f0f0f) fixed;
+  background: #151515;
+}
+.dark-mode {
+  background: #151515;
+}
+.light-mode {
+  background: #efefef;
 }
 @font-face {
   font-family: Valorant;
@@ -13,109 +19,303 @@ body {
   font-family: Brush;
   src: url("./fonts/Brush.ttf") format("truetype");
 }
-#logo img {
-  width: 40vw;
-  height: 100%;
+.container {
   position: relative;
-  bottom: 4.5vw;
+}
+.header {
+  user-select: none;
+  position: fixed;
+  height: 2em;
+  top: -.5px;
+  padding: 0 2px;
+  width: 100.5vw;
+  margin: 0 3px;
+  right: 0em;
+  display: flex;
+  background: #313131;
+  justify-content: left;
+  align-items: center;
+  z-index: 2;
+}
+.light-mode .header {
+  background: #9b9b9b;
+}
+.light-mode .profile {
+  background: #1d1d1d;
+}
+.light-mode #mode {
+  color: black;
+}
+.light-mode #clock {
+  color: #d9d9d9;
+}
+#logo {
+  position: relative;
+  left: .5em;
+  width: 4.5em;
+  height: 4.5em;
+}
+#name {
+  font-family: Valorant;
+  color: white;
+  font-size: .8em;
+  top: -3px;
+  letter-spacing: -1.5px;
+  position: relative;
+  left: 0em;
+}
+#motto {
+  font-family: SourceCode;
+  font-size: 0.5em;
+  top: 5px;
+  left: -8.6em;
+  color: white;
+  position: relative;
+}
+#clock {
+  color: #848484;
+  position: absolute;
+  right: 1em;
+  letter-spacing: -1.5px;
+  font-weight: bold;
+  font-size: .8em;
+  font-family: SourceCode;
+}
+.content {
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+  top: 5em;
+}
+.profile {
+  position: relative;
+  display: inline-block;
+  top: 1.5em;
+  border-radius: 5px;
+  align-items: center;
+  text-align: center;
+  height: auto;
+  user-select: none;
+  width: 90%;
+  background: #f0f0f0;
+}
+.top {
+  height: 5.5em;
+  border-radius: 5px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #37ceff;
   z-index: 3;
 }
-.panorama {
-  width: 100%;
-  height: 100%;
-  right: 1px;
+#icons {
+  z-index: 3;
   position: absolute;
-  object-fit: contain;
-  z-index: 0;
-  bottom: 40%;
+  right: 1.5em;
+  height: 4em;
+  border-radius: 3em;
+  width: 4em;
 }
-#tab {
-  width: 80%;
-  height: 140vw;
-  left: 10vw;
-  border-radius: 10px;
-  margin-left: auto;
-  margin-right: auto;
+#names {
+  font-size: 1.5em;
   position: absolute;
-  z-index: 2;
-  top: 20vmax;
-  background: rgba(15,15,15, 0.4);
-}
-.zxra a {
-  color: white;
+  font-weight: bold;
+  top: 1.3em;
+  left: 1.6em;
   font-family: Valorant;
-  font-size: 6vw;
-  position: relative;
-  padding: 5px 0;
-  top: 0.5em;
+  color: black;
 }
-#tooltip {
-  opacity: 0;
-  left: 11em;
-  font-size: 3vw;
-  font-family: Brush;
+#hi {
+  font-family: SourceCode;
+  font-size: .8em;
   position: absolute;
+  color: black;
+  top: 1.4em;
+  left: 3.2em;
+  letter-spacing: 6.5px;
+}
+#gweh {
+  font-family: SourceCode;
+  color: black;
+  position: absolute;
+  left: 2.5em;
+  top: 2.8em;
+}
+#mode {
+  position: absolute;
+  right: .5em;
+  bottom: -1.5em;
   color: white;
+  font-weight: bold;
+  font-size: 1.5em;
 }
-#introP {
-  top: 3.8em;
-  padding: 0.5em 0.5em;
-  border-radius: 4px;
-  width: 31em;
-  height: auto;
+.stat {
+  position: relative;
+  top: .5em;
+  height: 46vw;
+}
+.photo {
+  object-fit: content;
+  width: 34vw;
   position: absolute;
-  left: 2em;
-  background: #281657;
+  border-radius: 8px;
+  top: 4.5vw;
+  left: 3vw;
+}
+#description {
+  font-family: SourceCode;
+  position: absolute;
+  background: #e1e1e1;
+  color: #7f7f7f;
+  font-weight: bold;
+  font-size: 1.5vw;
+  letter-spacing: -.5px;
+  top: 5vw;
+  width: 44vw;
+  padding: .5em .5em;
+  border-radius: 8px;
+  line-height: 2.3vw;
+  line-height: 1.3vw;
+  right: 3vw;
   text-align: left;
-  font-family: SourceCode;
-  color: #b195fc;
-  font-size: 2.2vw;
 }
-.pad1 {
+#folder {
+  background: #37ceff;
+  display: flex;
+  font-family: Valorant;
   color: white;
-  right: 0em;
-  width: 31em;
-  text-align: justify;
-  font-family: SourceCode;
-  top: 24em;
-  padding: 0.5em 0;
+  text-align: center;
   position: relative;
-  font-size: 2.2vw;
+  height: 10%;
+  border-radius: 8px;
+  font-size: 2.5vw;
+  top: -1.25vw;
+  left: -.76vw;
+  font-weight: bold;
+  letter-spacing: 3px;
+  padding: .5em .5em;
+  width: 97.5%;
 }
-#package {
-  padding: 0.5em 0.5em;
-  border-radius: 4px;
-  width: 31em;
-  max-height: auto;
+.light-mode #about {
+  color: white;
+}
+#about {
+  font-family: Valorant;
+  font-weight: bold;
+  font-size: 3.2vw;
+  position: relative;
+  color: black;
+  z-index: 2;
+}
+#display {
+  user-select: none;
+  width: 100%;
+  height: 11.5em;
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  z-index: 0;
+  border-radius: 8px;
+  justify-content: center;
+  top: 8em;
+  text-align: center;
+  background: #2b2b2b;
+}
+#prjk {
   position: absolute;
-  outline-style: none;
-  top: 35em;
-  left: 2em;
-  background: #281657;
-  text-align: left;
-  font-family: SourceCode;
-  color: #b195fc;
-  font-size: 2.2vw;
+  padding: 1em .5em;
+  display: block;
+  color: black;
+  background: #37ceff;
+  border-radius: 8px;
+  width: calc(97.15% + 1vw);
+  font-family: Valorant;
 }
-#package #paket{
+.app {
+  width: calc(5em + 2vw);
   position: relative;
+  padding: 7px 2px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 1s ease;
+  color: black;
+  top: 3.5em;
+  margin: .2em .2em;
+  background: white;
+  border-radius: 5px;
+  height: calc(5em + 3vw);
 }
-#package #link {
+.app:hover {
+  width: 15em;
+  height: calc(5em + 3vw);
+}
+.app a {
+  font-size: calc(.35em + 1vw);
+  font-weight: bold;
+  font-family: SourceCode;
+  transition: all 1s ease;
+  position: relative;
+  letter-spacing: -.3px;
+}
+.app:hover a {
+  top: .9em;
+  position: absolute;
+  left: calc(4.1em + 6.9vw);
+}
+.app img {
+  width: calc(2.9em + 3vw);
+  position: relative;
+  top: 0px;
+  transition: all 1s ease;
+  border-radius: 5px;
+  height: calc(2.9em + 3vw);
+}
+.app:hover img {
+  position: absolute;
+  left: .5em;
+  top: .8em;
+}
+.app p {
   opacity: 0;
-  bottom: 1em;
-  left: 0em;
-  color: white;
-  padding: 0.5px 6px;
-  border-radius: 2px;
-  background: #3a1f81;
+  transition: all .5s ease;
   position: absolute;
-  transition: all 0.5s ease;
+  font-size: .4em;
+  padding: 3px;
+  border-radius: 5px;
+  width: 0;
+  text-align: center;
+  font-family: SourceCode;
+  background: #e1e1e1;
 }
-#linkText {
-  color: red;
-  text-decoration: none;
-}
-#linkText:hover #link {
-  left: 2.8em;
+.app:hover p {
   opacity: 1;
+  text-align: left;
+  width: 53%;
+  letter-spacing: -.5px;
+  line-height: .95em;
+  height: 45%;
+  left: calc(46% - 3px - 1vw);
+  top: calc(.9em + 1vmax);
+}
+.app c {
+  opacity: 0;
+  position: absolute;
+  left: 1em;
+  bottom: .5em;
+  font-size: .6em;
+  font-family: SourceCode;
+}
+.app:hover c {
+  opacity: 1;
+}
+#hrs {
+  z-index: 1000;
+  position: fixed;
+  font-family: SourceCode;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  bottom: 0px;
+  font-size: .3em;
 }
