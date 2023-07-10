@@ -211,7 +211,7 @@ body {
 #display {
   user-select: none;
   width: 100%;
-  height: 11.5em;
+  height: 11.2em;
   display: flex;
   flex-wrap: nowrap;
   position: relative;
@@ -318,4 +318,89 @@ body {
   margin: 0 auto;
   bottom: 0px;
   font-size: .3em;
+}
+.app .link {
+  opacity: 0;
+  position: absolute;
+  width: .85em;
+  height: .85em;
+}
+.app:hover .link {
+  opacity: 1;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+  bottom: .5em;
+  right: 1em;
+}
+.app .link i {
+  opacity: 0;
+  align-items: center;
+  text-align: center;
+  font-size: 1em;
+  bottom: -.2em;
+  right: 0em;
+  position: absolute;
+}
+.app:hover .link i {
+  opacity: 1;
+}
+#video {
+  width: 99%;
+  margin: 0 auto;
+  border-radius: 8px;
+  top: 8.7em;
+  position: relative;
+  background: #2b2b2b;
+  height: 41vw;
+}
+#video iframe {
+  width: 49%;
+  position: absolute;
+  left: .7em;
+  top: 13%;
+  height: 80%;
+  frameborder: 0;
+}
+#video a {
+  font-size: calc(.3em + 1vmin);
+  font-family: SourceCode;
+  letter-spacing: -1px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 4%;
+  left: 5%;
+  right: 5%;
+}
+#video b {
+  font-size: calc(.3em + .9vmin);
+  position: absolute;
+  justify-self: center;
+  text-align: left;
+  align-items: center;
+  border-radius: 4px;
+  right: 2%;
+  top: 13%;
+  height: 1vh;
+  color: white;
+  width: 45%;
+  background: #4a4a4a;
+  font-family: SourceCode;
+}
+#video p {
+  width: 43%;
+  white-space: pre-wrap;
+  font-size: calc(.3em + .6vmin);
+  background: #4a4a4a;
+  line-height: calc(.3em + .75vmin);
+  letter-spacing: -.5px;
+  padding: 1%;
+  position: absolute;
+  color: white;
+  right: 2%;
+  font-family: SourceCode;
+  top: 16.8%;
+  height: 70%;
 }
