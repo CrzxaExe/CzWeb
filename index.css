@@ -216,6 +216,9 @@ body {
   flex-wrap: nowrap;
   position: relative;
   z-index: 0;
+  overflow: visible;
+  overflow-y: hidden;
+  overflow-x: auto;
   border-radius: 8px;
   justify-content: center;
   top: 8em;
@@ -259,9 +262,9 @@ body {
   letter-spacing: -.3px;
 }
 .app:hover a {
-  top: .9em;
+  top: 5%;
   position: absolute;
-  left: calc(4.1em + 6.9vw);
+  right: 15%;
 }
 .app img {
   width: calc(2.9em + 3vw);
@@ -273,30 +276,33 @@ body {
 }
 .app:hover img {
   position: absolute;
-  left: .5em;
-  top: .8em;
+  width: 35%;
+  object-fit: contain;
+  left: .4em;
+  top: .9em;
 }
 .app p {
   opacity: 0;
   transition: all .5s ease;
   position: absolute;
-  font-size: .4em;
+  font-size: .5em;
   padding: 3px;
   border-radius: 5px;
-  width: 0;
+  width: 53%;
+  height: 45%;
   text-align: center;
   font-family: SourceCode;
+  overflow: auto;
   background: #e1e1e1;
 }
 .app:hover p {
   opacity: 1;
   text-align: left;
-  width: 53%;
+  width: 48%;
   letter-spacing: -.5px;
   line-height: .95em;
-  height: 45%;
-  left: calc(46% - 3px - 1vw);
-  top: calc(.9em + 1vmax);
+  left: calc(49% - 3px - .8vw);
+  top: calc(.6em + 1vmax);
 }
 .app c {
   opacity: 0;
@@ -315,6 +321,7 @@ body {
   font-family: SourceCode;
   justify-content: center;
   text-align: center;
+  user-select: none;
   margin: 0 auto;
   bottom: 0px;
   font-size: .3em;
@@ -330,7 +337,7 @@ body {
   justify-content: center;
   text-align: center;
   justify-items: center;
-  bottom: .5em;
+  bottom: .4em;
   right: 1em;
 }
 .app .link i {
@@ -338,7 +345,7 @@ body {
   align-items: center;
   text-align: center;
   font-size: 1em;
-  bottom: -.2em;
+  bottom: -.15em;
   right: 0em;
   position: absolute;
 }
@@ -350,11 +357,13 @@ body {
   margin: 0 auto;
   border-radius: 8px;
   top: 8.7em;
+  user-select: none;
   position: relative;
   background: #2b2b2b;
-  height: 41vw;
+  height: 39vw;
 }
 #video iframe {
+  user-select: none;
   width: 49%;
   position: absolute;
   left: .7em;
@@ -363,7 +372,7 @@ body {
   frameborder: 0;
 }
 #video a {
-  font-size: calc(.3em + 1vmin);
+  font-size: calc(.3em + 1.3vw);
   font-family: SourceCode;
   letter-spacing: -1px;
   color: white;
@@ -383,7 +392,7 @@ body {
   border-radius: 4px;
   right: 2%;
   top: 13%;
-  height: 1vh;
+  height: 2.8vh;
   color: white;
   width: 45%;
   background: #4a4a4a;
@@ -392,15 +401,175 @@ body {
 #video p {
   width: 43%;
   white-space: pre-wrap;
-  font-size: calc(.3em + .6vmin);
+  font-size: calc(.5em + .8vmin);
   background: #4a4a4a;
-  line-height: calc(.3em + .75vmin);
+  line-height: calc(.5em + .8vmin);
   letter-spacing: -.5px;
   padding: 1%;
   position: absolute;
+  overflow: auto;
   color: white;
   right: 2%;
   font-family: SourceCode;
   top: 16.8%;
   height: 70%;
+}
+#tools {
+  position: relative;
+  margin: 0 auto;
+  top: 9.6em;
+  height: 25vw;
+  background: #2b2b2b;
+  border-radius: 8px;
+  width: 99%;
+}
+#tools #tls {
+  background: #37ceff;
+  position: relative;
+  user-select: none;
+  font-family: Valorant;
+  font-size: 2.5vw;
+  font-weight: bold;
+  display: block;
+  padding: 4px 9px;
+  height: auto;
+  top: -.5em;
+  border-radius: 4px;
+  width: 55%;
+}
+.stress {
+  position: absolute;
+  left: 2%;
+}
+.stress div {
+  color: white;
+  user-select: none;
+  position: relative;
+  background: #4a4a4a;
+  border-radius: 8px;
+  width: 47vw;
+  height: 20vw;
+}
+.stress div b {
+  position: absolute;
+  top: 2%;
+  width: 100%;
+  font-family: SourceCode;
+  font-size: 2.6vw;
+  display: block;
+  text-align: center;
+}
+.stress div #waifu {
+  border: 1px solid #37ceff;
+  background: #bbeeff;
+  font-family: SourceCode;
+  text-align: center;
+  position: absolute;
+  top: calc(8% + 2.5vw);
+  height: 13%;
+  width: 60%;
+  left: 5%;
+  border-radius: 2px;
+}
+.stress div #generate {
+  border: 1px solid #37ceff;
+  color: white;
+  position: absolute;
+  border-radius: 2px;
+  right: 5%;
+  height: 17.2%;
+  width: 25%;
+  top: calc(8% + 2.5vw);
+  background: black;
+  font-family: SourceCode;
+  text-align: center;
+  font-size: 1.5vw;
+}
+.stress div a {
+  width: 90%;
+  background: #1c1c1c;
+  color: white;
+  position: absolute;
+  display: block;
+  user-select: text;
+  right: 5%;
+  left: 5%;
+  border-radius: 4px;
+  height: 50%;
+  padding: 2px;
+  overflow: auto;
+  font-family: Sans-Serif;
+  font-size: .65em;
+  bottom: 5%;
+}
+.stress div #copy {
+  width: 14%;
+  text-align: center;
+  left: 5%;
+  padding: 1px 0;
+  font-size: 2vw;
+  align-content: center;
+  align-items: center;
+  height: 18%;
+  position: absolute;
+  top: 2%;
+}
+.uuid {
+  position: absolute;
+  right: 1.5%;
+}
+.uuid div {
+  position: relative;
+  user-select: none;
+  border: 1px solid #37ceff;
+  width: 44.5vw;
+  color: white;
+  border-radius: 8px;
+  height: 8vw;
+  background: #4a4a4a;
+}
+.uuid div #refresh, .uuid div #copy {
+  position: absolute;
+  width: 10%;
+  font-size: 3.2vw;
+  border-radius: 2px;
+  padding: 0 2px;
+  text-align: center;
+  height: 46%;
+}
+.uuid div #refresh i, .uuid div #copy i {
+  text-align: center;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+}
+.uuid div #refresh {
+  left: 2%;
+  top: 4%;
+}
+.uuid div #copy {
+  top: 4%;
+  left: 14%;
+}
+.uuid div #genId {
+  position: absolute;
+  bottom: 8%;
+  padding: 2px;
+  font-size: 2vw;
+  background: #1c1c1c;
+  user-select: text;
+  left: 2%;
+  right: 2%;
+  font-family: Sans-Serif;
+  overflow: auto;
+  width: 94%;
+  border-radius: 2px;
+}
+.uuid div b {
+  font-family: SourceCode;
+  font-size: 3vw;
+  top: 2%;
+  position: absolute;
+  left: 27%;
 }

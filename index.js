@@ -18,7 +18,7 @@ const project = [
   {
     name: "Harzx",
     description: "Chat web",
-    version: "-1.0.0",
+    version: "0.0.1",
     icon: "./img/project.png",
     link: ""
   },
@@ -49,6 +49,13 @@ const project = [
     version: "1.0.0",
     icon: "https://raw.githubusercontent.com/CrzxaExe/ZxraDustry/main/icon.png",
     link: "https://github.com/CrzxaExe/ZxraDustry"
+  },
+  {
+    name: "ZxraRest",
+    description: "Rest API for zxra production",
+    version: "0.0.7",
+    icon: "./img/project.png",
+    link: ""
   }
 ]
 
@@ -81,14 +88,4 @@ function ageCalc(date) {
 function toggleMode() {
   document.body.classList.toggle('dark-mode');
   document.body.classList.toggle('light-mode');
-}
-
-function toggleSkill() {
-  const skill = document.getElementById("skill");
-  const nps = document.getElementById("nps");
-  skill.classList.toggle("hidden")
-  skill.classList.toggle("open")
-  if(nps.textContent === "+ Skills") {
-    nps.textContent = "- Skills"
-  } else nps.textContent = "+ Skills"
 }
